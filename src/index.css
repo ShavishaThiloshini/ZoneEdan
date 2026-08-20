@@ -1,6 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-deep-teal: #075E5B;
+  --color-ocean-teal: #0B817A;
+  --color-fresh-teal: #22A79D;
+  --color-aqua-mist: #DDF4F0;
+  --color-soft-cream: #FAF8F2;
+  --color-warm-sand: #F3E8D2;
+  --color-deep-forest: #173B35;
+  --font-sans: 'Geologica', sans-serif;
+  --font-serif: 'Fraunces', serif;
+}
 
 @layer base {
   body {

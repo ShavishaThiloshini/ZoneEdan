@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-soft-cream text-deep-forest font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-deep-teal;
+  }
+}
+
+@layer components {
+  /* Typography Utilities */
+  .heading-hero {
+    @apply font-serif text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-deep-teal;
+  }
+  
+  .heading-section {
+    @apply font-serif text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-deep-teal;
+  }
+
+  .heading-card {
+    @apply font-serif text-xl md:text-2xl font-bold leading-snug text-deep-teal;
+  }
+
+  .text-body-large {
+    @apply font-sans text-lg md:text-xl leading-relaxed text-deep-forest;
+  }
+
+  .text-body {
+    @apply font-sans text-base leading-relaxed text-deep-forest;
+  }
+  
+  .text-meta {
+    @apply font-sans text-sm text-deep-forest/70 uppercase tracking-wide;
+  }
+}

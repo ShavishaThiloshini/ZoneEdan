@@ -1,6 +1,6 @@
 import React from 'react';
 import Badge from '../ui/Badge';
-import { MapPin, Heart, ArrowRight } from 'lucide-react';
+import { MapPin, Heart, ArrowRight, Leaf, Coins } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const DestinationCard = ({ destination }) => {
@@ -45,11 +45,11 @@ const DestinationCard = ({ destination }) => {
         {/* Stats Row */}
         <div className="flex justify-between items-center text-sm font-medium text-deep-forest mb-4 border-t border-aqua-mist pt-4">
           <div className="flex items-center">
-            <span className="mr-1">😌</span>
+            <Leaf size={16} className="mr-1 text-ocean-teal" />
             {peaceScore} Peace
           </div>
           <div className="flex items-center text-deep-teal">
-            <span className="mr-1">💰</span>
+            <Coins size={16} className="mr-1" />
             {budgetLabel}
           </div>
         </div>

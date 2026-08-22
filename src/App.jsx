@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
+import Destinations from './pages/Destinations';
 import PageContainer from './components/layout/PageContainer';
 
 // Placeholder components for other routes
@@ -20,7 +21,7 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/destinations" element={<Placeholder title="Destinations" />} />
+          <Route path="/destinations" element={<Destinations />} />
           <Route path="/destinations/:id" element={<Placeholder title="Destination Detail" />} />
           <Route path="/collections" element={<Placeholder title="Collections" />} />
           <Route path="/collections/:id" element={<Placeholder title="Collection Detail" />} />

@@ -1,15 +1,16 @@
 import React from 'react';
 import PageContainer from '../layout/PageContainer';
 import { Link } from 'react-router-dom';
+import { Umbrella, Droplets, Droplet, Trees, Waves, Map, Ship } from 'lucide-react';
 
 const categories = [
-  { icon: '🏖️', name: 'Beaches', slug: 'beach' },
-  { icon: '💦', name: 'Waterfalls', slug: 'waterfall' },
-  { icon: '🏞️', name: 'Lakes', slug: 'lake' },
-  { icon: '🌴', name: 'Lagoons', slug: 'lagoon' },
-  { icon: '🌊', name: 'Rivers', slug: 'river' },
-  { icon: '🏝️', name: 'Islands', slug: 'island' },
-  { icon: '🏄', name: 'Surf', slug: 'surf' },
+  { icon: Umbrella, name: 'Beaches', slug: 'beach' },
+  { icon: Droplets, name: 'Waterfalls', slug: 'waterfall' },
+  { icon: Droplet, name: 'Lakes', slug: 'lake' },
+  { icon: Trees, name: 'Lagoons', slug: 'lagoon' },
+  { icon: Waves, name: 'Rivers', slug: 'river' },
+  { icon: Map, name: 'Islands', slug: 'island' },
+  { icon: Ship, name: 'Surf', slug: 'surf' },
 ];
 
 const ExperienceCategories = () => {
@@ -22,16 +23,19 @@ const ExperienceCategories = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-          {categories.map((cat) => (
-            <Link 
-              key={cat.slug} 
-              to={`/destinations?type=${cat.slug}`}
-              className="group flex flex-col items-center justify-center p-4 md:p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 w-28 h-28 md:w-32 md:h-32 hover:-translate-y-1 hover:bg-aqua-mist/50"
-            >
-              <span className="text-3xl md:text-4xl mb-3 group-hover:scale-110 transition-transform">{cat.icon}</span>
-              <span className="font-sans font-medium text-deep-forest text-sm md:text-base">{cat.name}</span>
-            </Link>
-          ))}
+          {categories.map((cat) => {
+            const Icon = cat.icon;
+            return (
+              <Link 
+                key={cat.slug} 
+                to={`/destinations?type=${cat.slug}`}
+                className="group flex flex-col items-center justify-center p-4 md:p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 w-28 h-28 md:w-32 md:h-32 hover:-translate-y-1 hover:bg-aqua-mist/50 text-deep-teal"
+              >
+                <Icon size={40} className="mb-3 group-hover:scale-110 transition-transform stroke-[1.5]" />
+                <span className="font-sans font-medium text-deep-forest text-sm md:text-base">{cat.name}</span>
+              </Link>
+            );
+          })}
         </div>
       </PageContainer>
     </section>

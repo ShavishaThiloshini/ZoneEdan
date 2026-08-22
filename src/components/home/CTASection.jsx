@@ -20,7 +20,7 @@ const CTASection = () => {
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link to="/signup">
-            <Button size="lg" className="w-full sm:w-auto bg-white text-deep-teal hover:bg-aqua-mist hover:text-deep-forest border-none">
+            <Button size="lg" className="w-full sm:w-auto bg-ocean-teal text-white hover:bg-fresh-teal hover:text-white border-none shadow-md">
               Create an Account
             </Button>
           </Link>

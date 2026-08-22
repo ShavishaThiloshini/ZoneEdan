@@ -7,7 +7,7 @@ const collections = [
     id: 'hidden-waterfalls',
     title: 'Hidden Waterfalls',
     description: 'Off the beaten path cascades that take a little effort to find.',
-    image: 'https://images.unsplash.com/photo-1546708973-2e4bd64a3951?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1510784722466-f2aa240a4abb?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'tranquil-lagoons',

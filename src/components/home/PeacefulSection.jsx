@@ -2,6 +2,7 @@ import React from 'react';
 import PageContainer from '../layout/PageContainer';
 import Button from '../ui/Button';
 import { Link } from 'react-router-dom';
+import { Leaf } from 'lucide-react';
 
 const PeacefulSection = () => {
   return (
@@ -13,7 +14,7 @@ const PeacefulSection = () => {
           <div className="w-full lg:w-1/2 relative">
             <div className="aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=1000&auto=format&fit=crop" 
+                src="https://picsum.photos/seed/peaceful/1000/1250" 
                 alt="A quiet corner in nature" 
                 className="w-full h-full object-cover"
               />
@@ -29,7 +30,7 @@ const PeacefulSection = () => {
                 <span className="text-lg text-deep-forest/50 font-serif">/ 5</span>
               </div>
               <div className="text-sm font-medium text-deep-forest mb-4 flex items-center">
-                <span className="mr-2">😌</span> Peaceful
+                <Leaf size={16} className="mr-2 text-ocean-teal" /> Peaceful
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between items-center text-xs text-deep-forest/70">

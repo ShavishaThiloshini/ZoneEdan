@@ -23,6 +23,22 @@ export const destinations = [
     shortDescription: 'Sri Lanka\'s highest waterfall plunging 220m through misty jungle into a natural pool.',
     suggestedDays: 2,
     featured: true,
+    fullDescription: 'Diyaluma Falls is Sri Lanka\'s second-highest waterfall and arguably its most epic natural infinity pool experience. Cascading down a spectacular 220-meter drop, the falls are hidden deep within the Koslanda jungle in the Badulla district. The journey to the top is an adventure in itself, passing through rubber plantations and tall grass trails. Once at the summit, you are rewarded with multiple natural pools carved into the rock by the rushing water. These pools offer a refreshing dip with panoramic views of the surrounding hills, making it a perfect spot for nature lovers and thrill-seekers alike.',
+    gallery: [
+      'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1620023477148-360e608221b6?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1614763172023-e28becc8cde0?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544487214-41d9961633d9?q=80&w=800&auto=format&fit=crop'
+    ],
+    activities: ['Hiking', 'Swimming', 'Photography', 'Camping', 'Picnicking'],
+    bestTime: 'December to April (Avoid heavy monsoon season as water levels can be dangerous)',
+    travelTips: [
+      'Start the hike early morning to avoid the midday sun and crowds.',
+      'Wear sturdy hiking shoes as the trail can be slippery.',
+      'Bring a waterproof bag for your electronics.',
+      'Pack enough water and snacks as there are no shops at the top.',
+      'Be cautious around the edges of the upper pools.'
+    ],
   },
   {
     id: '2',

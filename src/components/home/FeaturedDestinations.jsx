@@ -1,41 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import DestinationCard from '../destination/DestinationCard';
 import PageContainer from '../layout/PageContainer';
 import Button from '../ui/Button';
 import { ArrowRight } from 'lucide-react';
+import { destinations } from '../../data/destinations';
 
-const mockDestinations = [
-  {
-    id: 'diyaluma-falls',
-    title: 'Diyaluma Falls',
-    location: 'Badulla, Sri Lanka',
-    type: 'Waterfall',
-    image: 'https://picsum.photos/seed/diyaluma/800/600',
-    peaceScore: '4.7',
-    budgetLabel: 'Budget Friendly',
-    priceRange: 'LKR 8,000 – 15,000',
-  },
-  {
-    id: 'hiriketiya-bay',
-    title: 'Hiriketiya Bay',
-    location: 'Dickwella, Sri Lanka',
-    type: 'Surf',
-    image: 'https://picsum.photos/seed/hiriketiya/800/600',
-    peaceScore: '3.8',
-    budgetLabel: 'Moderate',
-    priceRange: 'LKR 15,000 – 25,000',
-  },
-  {
-    id: 'koggala-lake',
-    title: 'Koggala Lake',
-    location: 'Galle, Sri Lanka',
-    type: 'Lake',
-    image: 'https://picsum.photos/seed/koggala/800/600',
-    peaceScore: '4.9',
-    budgetLabel: 'Budget Friendly',
-    priceRange: 'LKR 5,000 – 10,000',
-  }
-];
+// Pick the first 3 featured destinations from the dataset
+const featuredDestinations = destinations
+  .filter(d => d.featured)
+  .slice(0, 3);
 
 const FeaturedDestinations = () => {
   return (
@@ -49,24 +23,28 @@ const FeaturedDestinations = () => {
             </p>
           </div>
           <div className="hidden md:block">
-            <Button variant="outline" className="group">
-              View All 
-              <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link to="/destinations">
+              <Button variant="outline" className="group">
+                View All 
+                <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {mockDestinations.map(dest => (
+          {featuredDestinations.map(dest => (
             <DestinationCard key={dest.id} destination={dest} />
           ))}
         </div>
 
         <div className="mt-10 md:hidden flex justify-center">
-          <Button variant="outline" className="w-full group">
-            View All Escapes
-            <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link to="/destinations" className="w-full">
+            <Button variant="outline" className="w-full group">
+              View All Escapes
+              <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </PageContainer>
     </section>
@@ -74,3 +52,4 @@ const FeaturedDestinations = () => {
 };
 
 export default FeaturedDestinations;
+

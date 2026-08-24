@@ -253,7 +253,8 @@ export const destinations = [
     bestTime: 'December to April',
     suggestedDays: 1,
     images: [
-      'https://images.unsplash.com/photo-1503756234508-e32369269ddf?q=80&w=1200&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1559494007-9f5847c49d94?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=800&auto=format&fit=crop'
     ],
     travelTips: [
       'Take a sunrise boat tour to see the fishing fleet heading out.',
@@ -309,7 +310,7 @@ export const destinations = [
     bestTime: 'March to May and October to November',
     suggestedDays: 2,
     images: [
-      'https://images.unsplash.com/photo-1510784722466-f2aa240a4abb?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=800&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=800&auto=format&fit=crop'
     ],

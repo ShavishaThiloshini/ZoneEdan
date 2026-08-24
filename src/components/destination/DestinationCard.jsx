@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 
 const DestinationCard = ({ destination }) => {
   const { 
-    id,
-    title, 
+    slug,
+    name, 
     location, 
     type, 
-    image, 
+    images, 
     peaceScore, 
-    budgetLabel, 
-    priceRange 
+    budget,
+    estimatedCost
   } = destination;
 
   return (
@@ -20,8 +20,8 @@ const DestinationCard = ({ destination }) => {
       {/* Image Container */}
       <div className="relative aspect-[4/3] overflow-hidden">
         <img 
-          src={image} 
-          alt={title} 
+          src={images?.[0]} 
+          alt={name} 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <button className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full text-deep-teal hover:bg-white hover:text-ocean-teal transition-colors">
@@ -35,7 +35,7 @@ const DestinationCard = ({ destination }) => {
           <Badge>{type}</Badge>
         </div>
 
-        <h3 className="heading-card mb-1">{title}</h3>
+        <h3 className="heading-card mb-1">{name}</h3>
         
         <div className="flex items-center text-meta mb-4">
           <MapPin size={14} className="mr-1 inline" />
@@ -50,16 +50,16 @@ const DestinationCard = ({ destination }) => {
           </div>
           <div className="flex items-center text-deep-teal">
             <Coins size={16} className="mr-1" />
-            {budgetLabel}
+            {budget}
           </div>
         </div>
 
         <div className="text-sm text-deep-forest/70 mb-4">
-          {priceRange}
+          From LKR {estimatedCost?.toLocaleString()}
         </div>
 
         <div className="mt-auto pt-2">
-          <Link to={`/destinations/${id}`} className="inline-flex items-center text-ocean-teal font-medium hover:text-deep-teal transition-colors group/link">
+          <Link to={`/destinations/${slug}`} className="inline-flex items-center text-ocean-teal font-medium hover:text-deep-teal transition-colors group/link">
             Explore 
             <ArrowRight size={16} className="ml-1 transition-transform group-hover/link:translate-x-1" />
           </Link>
@@ -70,3 +70,5 @@ const DestinationCard = ({ destination }) => {
 };
 
 export default DestinationCard;
+
+

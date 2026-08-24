@@ -20,7 +20,7 @@ const matchesSearch = (d, query) => {
     normalise(d.region).includes(q) ||
     normalise(d.type).includes(q) ||
     normalise(d.waterType).includes(q) ||
-    normalise(d.shortDescription).includes(q)
+    normalise(d.description).includes(q)
   );
 };
 
@@ -30,9 +30,9 @@ const sortDestinations = (list, sortBy) => {
     case 'peaceful':
       return copy.sort((a, b) => b.peaceScore - a.peaceScore);
     case 'budget-low':
-      return copy.sort((a, b) => a.minBudget - b.minBudget);
+      return copy.sort((a, b) => a.estimatedCost - b.estimatedCost);
     case 'newest':
-      return copy.sort((a, b) => Number(b.id) - Number(a.id));
+      return copy.sort((a, b) => b.id - a.id);
     case 'recommended':
     default:
       // Featured first, then by peace score
@@ -73,7 +73,7 @@ const Destinations = () => {
     let list = destinations.filter((d) => {
       if (!matchesSearch(d, searchQuery)) return false;
       if (activeWaterTypes.length && !activeWaterTypes.includes(d.waterType)) return false;
-      if (activeBudget && d.budgetLevel !== activeBudget) return false;
+      if (activeBudget && d.budget !== activeBudget) return false;
       if (activeRegion && d.region !== activeRegion) return false;
       if (minPeaceScore !== null && d.peaceScore < minPeaceScore) return false;
       return true;

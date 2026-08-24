@@ -37,7 +37,7 @@ const DestinationDetail = () => {
       <div className="relative h-[60vh] min-h-[400px] w-full">
         <div className="absolute inset-0 bg-black/40 z-10" />
         <img 
-          src={destination.image} 
+          src={destination.images?.[0]} 
           alt={destination.name} 
           className="w-full h-full object-cover"
         />
@@ -90,7 +90,7 @@ const DestinationDetail = () => {
                 </div>
                 <div>
                   <div className="text-sm text-meta">Budget Level</div>
-                  <div className="font-semibold text-deep-forest text-lg">{destination.budgetLabel}</div>
+                  <div className="font-semibold text-deep-forest text-lg">{destination.budget}</div>
                 </div>
               </div>
               <div className="w-px bg-aqua-mist hidden md:block"></div>
@@ -109,23 +109,23 @@ const DestinationDetail = () => {
             <section>
               <h2 className="text-2xl font-bold text-deep-forest mb-4">About this place</h2>
               <p className="text-deep-forest/80 text-lg leading-relaxed whitespace-pre-line">
-                {destination.fullDescription || destination.shortDescription}
+                {destination.description}
               </p>
             </section>
 
             {/* Image Gallery */}
-            {destination.gallery && (
+            {destination.images && destination.images.length > 1 && (
               <section>
                 <h2 className="text-2xl font-bold text-deep-forest mb-4">Gallery</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {destination.gallery.map((img, idx) => (
+                  {destination.images.map((img, idx) => (
                     <div 
                       key={idx} 
                       className={`rounded-2xl overflow-hidden aspect-square ${idx === 0 ? 'md:col-span-2 md:row-span-2 aspect-auto' : ''}`}
                     >
                       <img 
                         src={img} 
-                        alt={`Gallery ${idx + 1}`} 
+                        alt={`${destination.name} Gallery ${idx + 1}`} 
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                       />
                     </div>
@@ -188,7 +188,9 @@ const DestinationDetail = () => {
 
               <div className="mt-8 pt-8 border-t border-aqua-mist/50">
                 <div className="text-sm text-meta mb-2">Estimated Budget</div>
-                <div className="text-2xl font-bold text-deep-teal">{destination.priceRange}</div>
+                <div className="text-2xl font-bold text-deep-teal">
+                  From LKR {destination.estimatedCost?.toLocaleString()}
+                </div>
                 <button className="w-full mt-6 btn-primary flex justify-center items-center py-4">
                   <Heart className="mr-2" size={20} /> Save Destination
                 </button>

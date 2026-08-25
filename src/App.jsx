@@ -5,6 +5,11 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Destinations from './pages/Destinations';
 import DestinationDetail from './pages/DestinationDetail';
+import Favorites from './pages/Favorites';
+import Collections from './pages/Collections';
+import CollectionDetail from './pages/CollectionDetail';
+import Stories from './pages/Stories';
+import StoryDetail from './pages/StoryDetail';
 import PageContainer from './components/layout/PageContainer';
 
 // Placeholder components for other routes
@@ -24,10 +29,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/destinations/:slug" element={<DestinationDetail />} />
-          <Route path="/collections" element={<Placeholder title="Collections" />} />
-          <Route path="/collections/:id" element={<Placeholder title="Collection Detail" />} />
-          <Route path="/stories" element={<Placeholder title="Stories" />} />
-          <Route path="/stories/:id" element={<Placeholder title="Story Detail" />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/collections" element={<Collections />} />
+          <Route path="/collections/:id" element={<CollectionDetail />} />
+          <Route path="/stories" element={<Stories />} />
+          <Route path="/stories/:id" element={<StoryDetail />} />
           <Route path="/signup" element={<Placeholder title="Sign Up" />} />
           <Route path="/login" element={<Placeholder title="Log In" />} />
         </Routes>

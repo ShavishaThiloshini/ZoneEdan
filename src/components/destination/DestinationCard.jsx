@@ -2,6 +2,7 @@ import React from 'react';
 import Badge from '../ui/Badge';
 import { MapPin, Heart, ArrowRight, Leaf, Coins } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useFavorites } from '../../contexts/FavoritesContext';
 
 const DestinationCard = ({ destination }) => {
   const { 
@@ -14,18 +15,35 @@ const DestinationCard = ({ destination }) => {
     budget,
     estimatedCost
   } = destination;
+  
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const favored = isFavorite(slug);
+
+  const handleFavoriteClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleFavorite(slug);
+  };
 
   return (
     <div className="group relative flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
       {/* Image Container */}
       <div className="relative aspect-[4/3] overflow-hidden">
-        <img 
-          src={images?.[0]} 
-          alt={name} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <button className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full text-deep-teal hover:bg-white hover:text-ocean-teal transition-colors">
-          <Heart size={20} className="hover:fill-current" />
+        <Link to={`/destinations/${slug}`} className="block w-full h-full">
+          <img 
+            src={images?.[0]} 
+            alt={name} 
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </Link>
+        <button 
+          onClick={handleFavoriteClick}
+          className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full text-deep-teal hover:bg-white hover:text-ocean-teal transition-colors"
+        >
+          <Heart 
+            size={20} 
+            className={`transition-colors ${favored ? 'fill-red-500 text-red-500' : 'hover:fill-current'}`} 
+          />
         </button>
       </div>
 

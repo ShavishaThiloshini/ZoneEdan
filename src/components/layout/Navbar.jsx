@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Heart, User } from 'lucide-react';
 import PageContainer from './PageContainer';
+import { useFavorites } from '../../contexts/FavoritesContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { favorites } = useFavorites();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,9 +47,14 @@ const Navbar = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <button className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal transition-colors`} aria-label="Favorites">
+            <Link to="/favorites" className={`relative ${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal transition-colors`} aria-label="Favorites">
               <Heart size={20} />
-            </button>
+              {favorites.length > 0 && (
+                <span className="absolute -top-1.5 -right-2 bg-red-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                  {favorites.length}
+                </span>
+              )}
+            </Link>
             <button className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal transition-colors`} aria-label="Profile">
               <User size={20} />
             </button>
@@ -73,9 +80,9 @@ const Navbar = () => {
             <Link to="/collections" className="text-lg text-deep-forest py-2 border-b border-aqua-mist/50" onClick={() => setMobileMenuOpen(false)}>Collections</Link>
             <Link to="/stories" className="text-lg text-deep-forest py-2 border-b border-aqua-mist/50" onClick={() => setMobileMenuOpen(false)}>Stories</Link>
             <div className="flex gap-4 pt-2">
-              <button className="flex items-center gap-2 text-deep-forest" onClick={() => setMobileMenuOpen(false)}>
-                <Heart size={20} /> Favorites
-              </button>
+              <Link to="/favorites" className="flex items-center gap-2 text-deep-forest" onClick={() => setMobileMenuOpen(false)}>
+                <Heart size={20} /> Favorites ({favorites.length})
+              </Link>
               <button className="flex items-center gap-2 text-deep-forest ml-auto" onClick={() => setMobileMenuOpen(false)}>
                 <User size={20} /> Profile
               </button>

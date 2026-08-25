@@ -38,7 +38,7 @@ const EmptyState = ({ activeWaterTypes, searchQuery, onClearAll }) => {
 
       <button
         onClick={onClearAll}
-        className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-deep-teal text-white font-sans font-medium text-base hover:bg-ocean-teal transition-colors duration-200 shadow-sm"
+        className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-deep-teal text-white font-sans font-medium text-base hover:bg-ocean-teal transition-all duration-300 shadow-[0_2px_8px_rgba(23,59,53,0.1)] hover:shadow-[0_4px_16px_rgba(23,59,53,0.15)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ocean-teal outline-none"
       >
         Clear All Filters
       </button>

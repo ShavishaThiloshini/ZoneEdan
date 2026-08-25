@@ -24,20 +24,20 @@ const Footer = () => {
           <div>
             <h4 className="font-serif text-lg font-bold mb-4 text-aqua-mist">Explore</h4>
             <ul className="space-y-3">
-              <li><Link to="/destinations" className="text-soft-cream/80 hover:text-white transition-colors">All Destinations</Link></li>
-              <li><Link to="/collections" className="text-soft-cream/80 hover:text-white transition-colors">Curated Collections</Link></li>
-              <li><Link to="/stories" className="text-soft-cream/80 hover:text-white transition-colors">Travel Stories</Link></li>
-              <li><Link to="/map" className="text-soft-cream/80 hover:text-white transition-colors">Map View</Link></li>
+              <li><Link to="/destinations" className="text-soft-cream/80 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-aqua-mist focus-visible:ring-offset-2 focus-visible:ring-offset-deep-forest rounded outline-none">All Destinations</Link></li>
+              <li><Link to="/collections" className="text-soft-cream/80 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-aqua-mist focus-visible:ring-offset-2 focus-visible:ring-offset-deep-forest rounded outline-none">Curated Collections</Link></li>
+              <li><Link to="/stories" className="text-soft-cream/80 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-aqua-mist focus-visible:ring-offset-2 focus-visible:ring-offset-deep-forest rounded outline-none">Travel Stories</Link></li>
+              <li><Link to="/map" className="text-soft-cream/80 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-aqua-mist focus-visible:ring-offset-2 focus-visible:ring-offset-deep-forest rounded outline-none">Map View</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-serif text-lg font-bold mb-4 text-aqua-mist">About</h4>
             <ul className="space-y-3">
-              <li><Link to="/about" className="text-soft-cream/80 hover:text-white transition-colors">Our Mission</Link></li>
-              <li><Link to="/contact" className="text-soft-cream/80 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/privacy" className="text-soft-cream/80 hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-soft-cream/80 hover:text-white transition-colors">Terms of Service</Link></li>
+              <li><Link to="/about" className="text-soft-cream/80 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-aqua-mist focus-visible:ring-offset-2 focus-visible:ring-offset-deep-forest rounded outline-none">Our Mission</Link></li>
+              <li><Link to="/contact" className="text-soft-cream/80 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-aqua-mist focus-visible:ring-offset-2 focus-visible:ring-offset-deep-forest rounded outline-none">Contact</Link></li>
+              <li><Link to="/privacy" className="text-soft-cream/80 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-aqua-mist focus-visible:ring-offset-2 focus-visible:ring-offset-deep-forest rounded outline-none">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-soft-cream/80 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-aqua-mist focus-visible:ring-offset-2 focus-visible:ring-offset-deep-forest rounded outline-none">Terms of Service</Link></li>
             </ul>
           </div>
         </div>

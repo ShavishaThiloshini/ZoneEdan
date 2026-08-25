@@ -20,6 +20,10 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif text-deep-teal;
   }
+  
+  :focus-visible {
+    @apply outline-none ring-2 ring-ocean-teal ring-offset-2 ring-offset-soft-cream;
+  }
 }
 
 @layer components {

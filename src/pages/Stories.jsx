@@ -28,13 +28,14 @@ const Stories = () => {
             {stories.map((story) => (
               <article 
                 key={story.id} 
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1"
+                className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(23,59,53,0.04)] hover:shadow-[0_8px_24px_rgba(23,59,53,0.08)] transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1 focus-within:ring-2 focus-within:ring-ocean-teal focus-within:ring-offset-2"
               >
                 {/* Image */}
-                <Link to={`/stories/${story.slug}`} className="block relative aspect-video overflow-hidden">
+                <Link to={`/stories/${story.slug}`} className="block relative aspect-video overflow-hidden outline-none" aria-label={`Read story: ${story.title}`}>
                   <img 
                     src={story.image} 
                     alt={story.title} 
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </Link>

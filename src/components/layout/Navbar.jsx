@@ -39,15 +39,15 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/" className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal font-medium transition-colors`}>Home</Link>
-            <Link to="/destinations" className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal font-medium transition-colors`}>Destinations</Link>
-            <Link to="/collections" className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal font-medium transition-colors`}>Collections</Link>
-            <Link to="/stories" className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal font-medium transition-colors`}>Stories</Link>
+            <Link to="/" className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ocean-teal rounded outline-none px-2 py-1 -mx-2`}>Home</Link>
+            <Link to="/destinations" className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ocean-teal rounded outline-none px-2 py-1 -mx-2`}>Destinations</Link>
+            <Link to="/collections" className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ocean-teal rounded outline-none px-2 py-1 -mx-2`}>Collections</Link>
+            <Link to="/stories" className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ocean-teal rounded outline-none px-2 py-1 -mx-2`}>Stories</Link>
           </nav>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/favorites" className={`relative ${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal transition-colors`} aria-label="Favorites">
+            <Link to="/favorites" className={`relative ${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ocean-teal rounded outline-none p-1`} aria-label="Favorites">
               <Heart size={20} />
               {favorites.length > 0 && (
                 <span className="absolute -top-1.5 -right-2 bg-red-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
@@ -55,16 +55,17 @@ const Navbar = () => {
                 </span>
               )}
             </Link>
-            <button className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal transition-colors`} aria-label="Profile">
+            <button className={`${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ocean-teal rounded outline-none p-1`} aria-label="Profile">
               <User size={20} />
             </button>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button 
-            className={`md:hidden p-2 -mr-2 ${isScrolled ? 'text-deep-forest' : 'text-white'}`}
+            className={`md:hidden p-2 -mr-2 ${isScrolled ? 'text-deep-forest' : 'text-white'} hover:text-ocean-teal transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ocean-teal rounded outline-none`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

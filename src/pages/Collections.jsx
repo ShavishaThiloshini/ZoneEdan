@@ -29,17 +29,19 @@ const Collections = () => {
               <Link 
                 key={collection.id} 
                 to={`/collections/${collection.slug}`}
-                className="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                aria-label={`View ${collection.title} collection`}
+                className="group relative h-80 rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(23,59,53,0.04)] hover:shadow-[0_8px_24px_rgba(23,59,53,0.12)] transition-all duration-300 transform hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-ocean-teal focus-visible:ring-offset-2"
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
                   <img 
                     src={collection.image} 
                     alt={collection.title} 
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-forest/90 via-deep-forest/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-forest/90 via-deep-forest/30 to-transparent" />
                 </div>
                 
                 {/* Content */}

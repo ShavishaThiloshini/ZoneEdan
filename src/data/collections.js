@@ -12,7 +12,7 @@ export const collections = [
     slug: 'hidden-waterfalls',
     title: 'Hidden Waterfalls',
     description: 'Venture off the beaten path to discover majestic cascades nestled deep within the jungle.',
-    image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop',
     destinations: ['diyaluma-falls', 'ravana-falls', 'bambarakanda-falls']
   },
   {

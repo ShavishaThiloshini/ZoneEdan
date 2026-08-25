@@ -18,7 +18,7 @@ Located in the Matale district, Sera Ella is unique because you can walk behind 
 
 *(This is a short preview of the full article. In a complete implementation, this would be a long-form editorial piece with rich imagery.)*
     `,
-    image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=1200&auto=format&fit=crop',
     date: 'August 15, 2026',
     author: 'Ayesha Perera',
     readTime: '5 min read'

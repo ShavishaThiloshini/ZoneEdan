@@ -10,8 +10,8 @@ const HeroSection = () => {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://st2.depositphotos.com/1010305/5769/i/450/depositphotos_57698609-stock-photo-deep-forest-waterfall.jpg"
-          alt="Peaceful waterfall in Sri Lanka"
+          src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
+          alt="Peaceful waterfall surrounded by lush jungle in Sri Lanka"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-deep-forest/40 via-deep-forest/20 to-soft-cream"></div>

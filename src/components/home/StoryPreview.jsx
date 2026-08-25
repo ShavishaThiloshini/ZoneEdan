@@ -9,7 +9,7 @@ const stories = [
     tag: 'TRAVEL GUIDE',
     title: '5 Peaceful Waterfalls to Explore in Sri Lanka',
     description: 'Discover places where water meets the wild. A guide to the most serene cascades away from the crowds.',
-    image: 'https://images.unsplash.com/photo-1546708973-2e4bd64a3951?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'guide-to-southern-beaches',

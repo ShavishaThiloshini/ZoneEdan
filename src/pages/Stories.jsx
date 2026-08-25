@@ -13,7 +13,7 @@ const Stories = () => {
       <section className="bg-deep-forest text-white pt-32 pb-16">
         <PageContainer>
           <div className="max-w-3xl">
-            <h1 className="heading-hero mb-6">Travel Stories</h1>
+            <h1 className="heading-hero mb-6 text-white">Travel Stories</h1>
             <p className="text-xl text-soft-cream/90 max-w-2xl leading-relaxed">
               Inspiration, guides, and stories to help you plan your perfect escape.
             </p>

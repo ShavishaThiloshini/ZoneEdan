@@ -25,9 +25,9 @@ export const destinations = [
     suggestedDays: 2,
     images: [
       'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1620023477148-360e608221b6?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1614763172023-e28becc8cde0?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544487214-41d9961633d9?q=80&w=800&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1434394354979-a235cd36269d?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?q=80&w=800&auto=format&fit=crop'
     ],
     travelTips: [
       'Start the hike early morning to avoid the midday sun and crowds.',

@@ -21,7 +21,7 @@ const Favorites = () => {
       <section className="bg-deep-forest text-white pt-32 pb-16">
         <PageContainer>
           <div className="max-w-3xl">
-            <h1 className="heading-hero mb-6">Your Saved Escapes</h1>
+            <h1 className="heading-hero mb-6 text-white">Your Saved Escapes</h1>
             <p className="text-xl text-soft-cream/90 max-w-2xl leading-relaxed">
               All your favorite relaxing destinations in one place.
             </p>

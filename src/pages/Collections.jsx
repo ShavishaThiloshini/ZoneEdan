@@ -13,7 +13,7 @@ const Collections = () => {
       <section className="bg-deep-forest text-white pt-32 pb-16">
         <PageContainer>
           <div className="max-w-3xl">
-            <h1 className="heading-hero mb-6">Curated Collections</h1>
+            <h1 className="heading-hero mb-6 text-white">Curated Collections</h1>
             <p className="text-xl text-soft-cream/90 max-w-2xl leading-relaxed">
               Explore our hand-picked groupings of Sri Lanka's finest water and nature escapes.
             </p>
@@ -41,12 +41,12 @@ const Collections = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-forest/90 via-deep-forest/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-forest via-deep-forest/60 to-deep-forest/10" />
                 </div>
                 
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                  <h3 className="text-2xl font-serif font-bold mb-2 group-hover:text-aqua-mist transition-colors">
+                  <h3 className="text-2xl font-serif font-bold mb-2 text-white group-hover:text-aqua-mist transition-colors drop-shadow-lg">
                     {collection.title}
                   </h3>
                   <p className="text-sm text-soft-cream/90 line-clamp-2 mb-4">

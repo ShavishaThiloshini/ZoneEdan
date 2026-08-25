@@ -76,7 +76,15 @@ const Destinations = () => {
       if (activeWaterTypes.length && !activeWaterTypes.includes(d.waterType)) return false;
       if (activeBudget && d.budget !== activeBudget) return false;
       if (activeRegion && d.region !== activeRegion) return false;
-      if (minPeaceScore !== null && d.peaceScore < minPeaceScore) return false;
+      
+      if (minPeaceScore !== null) {
+        if (minPeaceScore === 'below4') {
+          if (d.peaceScore >= 4) return false;
+        } else {
+          if (d.peaceScore < minPeaceScore) return false;
+        }
+      }
+
       if (activeActivities.length && !activeActivities.every(activity => d.activities?.includes(activity))) return false;
       return true;
     });

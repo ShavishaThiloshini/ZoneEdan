@@ -380,6 +380,7 @@ export const REGION_OPTIONS = [
 export const PEACE_SCORE_OPTIONS = [
   { value: 4,   label: '4+' },
   { value: 4.5, label: '4.5+' },
+  { value: 'below4', label: 'Below 4' },
 ];
 
 export const ACTIVITIES_OPTIONS = [

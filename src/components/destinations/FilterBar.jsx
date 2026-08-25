@@ -7,6 +7,7 @@ import {
   REGION_OPTIONS,
   PEACE_SCORE_OPTIONS,
   SORT_OPTIONS,
+  ACTIVITIES_OPTIONS,
 } from '../../data/destinations';
 
 // ── Pill Button ────────────────────────────────────────────────────────────────
@@ -96,11 +97,13 @@ const FilterBar = ({
   activeBudget,
   activeRegion,
   minPeaceScore,
+  activeActivities,
   sortBy,
   onWaterTypeToggle,
   onBudgetChange,
   onRegionChange,
   onPeaceScoreChange,
+  onActivityToggle,
   onSortChange,
   onClearAll,
   hasActiveFilters,
@@ -149,13 +152,24 @@ const FilterBar = ({
           ))}
         </FilterGroup>
 
-        <FilterGroup label="Peace">
+        <FilterGroup label="Peace Score">
           {PEACE_SCORE_OPTIONS.map((opt) => (
             <Pill
               key={opt.value}
               label={opt.label}
               active={minPeaceScore === opt.value}
               onClick={() => onPeaceScoreChange(minPeaceScore === opt.value ? null : opt.value)}
+            />
+          ))}
+        </FilterGroup>
+
+        <FilterGroup label="Activities">
+          {ACTIVITIES_OPTIONS.map((opt) => (
+            <Pill
+              key={opt.value}
+              label={opt.label}
+              active={activeActivities.includes(opt.value)}
+              onClick={() => onActivityToggle(opt.value)}
             />
           ))}
         </FilterGroup>

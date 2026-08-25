@@ -378,9 +378,16 @@ export const REGION_OPTIONS = [
 ];
 
 export const PEACE_SCORE_OPTIONS = [
-  { value: 3,   label: '3.0+' },
-  { value: 4,   label: '4.0+' },
+  { value: 4,   label: '4+' },
   { value: 4.5, label: '4.5+' },
+];
+
+export const ACTIVITIES_OPTIONS = [
+  { value: 'Swimming', label: 'Swimming' },
+  { value: 'Hiking', label: 'Hiking' },
+  { value: 'Photography', label: 'Photography' },
+  { value: 'Surfing', label: 'Surfing' },
+  { value: 'Camping', label: 'Camping' },
 ];
 
 export const SORT_OPTIONS = [

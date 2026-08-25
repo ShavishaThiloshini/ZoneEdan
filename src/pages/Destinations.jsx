@@ -58,6 +58,7 @@ const Destinations = () => {
   const [activeBudget, setActiveBudget]       = useState(null);
   const [activeRegion, setActiveRegion]       = useState(null);
   const [minPeaceScore, setMinPeaceScore]     = useState(null);
+  const [activeActivities, setActiveActivities] = useState([]);
   const [sortBy, setSortBy]                   = useState('recommended');
 
   // Keep URL in sync with search query (for sharing / back-nav)
@@ -76,10 +77,11 @@ const Destinations = () => {
       if (activeBudget && d.budget !== activeBudget) return false;
       if (activeRegion && d.region !== activeRegion) return false;
       if (minPeaceScore !== null && d.peaceScore < minPeaceScore) return false;
+      if (activeActivities.length && !activeActivities.every(activity => d.activities?.includes(activity))) return false;
       return true;
     });
     return sortDestinations(list, sortBy);
-  }, [searchQuery, activeWaterTypes, activeBudget, activeRegion, minPeaceScore, sortBy]);
+  }, [searchQuery, activeWaterTypes, activeBudget, activeRegion, minPeaceScore, activeActivities, sortBy]);
 
   // ── Handlers ───────────────────────────────────────────────────────────────
   const handleWaterTypeToggle = (type) => {
@@ -88,11 +90,18 @@ const Destinations = () => {
     );
   };
 
+  const handleActivityToggle = (activity) => {
+    setActiveActivities((prev) =>
+      prev.includes(activity) ? prev.filter((a) => a !== activity) : [...prev, activity]
+    );
+  };
+
   const hasActiveFilters =
     activeWaterTypes.length > 0 ||
     activeBudget !== null ||
     activeRegion !== null ||
     minPeaceScore !== null ||
+    activeActivities.length > 0 ||
     searchQuery !== '';
 
   const clearAll = () => {
@@ -101,6 +110,7 @@ const Destinations = () => {
     setActiveBudget(null);
     setActiveRegion(null);
     setMinPeaceScore(null);
+    setActiveActivities([]);
     setSortBy('recommended');
   };
 
@@ -122,11 +132,13 @@ const Destinations = () => {
         activeBudget={activeBudget}
         activeRegion={activeRegion}
         minPeaceScore={minPeaceScore}
+        activeActivities={activeActivities}
         sortBy={sortBy}
         onWaterTypeToggle={handleWaterTypeToggle}
         onBudgetChange={setActiveBudget}
         onRegionChange={setActiveRegion}
         onPeaceScoreChange={setMinPeaceScore}
+        onActivityToggle={handleActivityToggle}
         onSortChange={setSortBy}
         onClearAll={clearAll}
         hasActiveFilters={hasActiveFilters}

@@ -43,7 +43,7 @@ const DestinationDetail = () => {
         />
         
         {/* Top Navigation */}
-        <div className="absolute top-0 left-0 w-full z-20 p-6 md:p-10 flex justify-between items-center">
+        <div className="absolute top-20 md:top-24 left-0 w-full z-20 p-6 md:p-10 flex justify-between items-center">
           <Link to="/destinations" className="flex items-center text-white bg-black/30 hover:bg-black/50 backdrop-blur-md px-4 py-2 rounded-full transition-all">
             <ArrowLeft size={20} className="mr-2" />
             Back to Explore
